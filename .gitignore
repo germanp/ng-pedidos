@@ -1,0 +1,9 @@
+temp/
+dist/
+node_modules/
+bower_components/
+coverage/
+_SpecRunner.html
+.DS_Store
+test-results.xml
+*~
