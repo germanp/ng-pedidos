@@ -5,6 +5,7 @@
         .module('appCore', [
             'ngAnimate',
             'ngSanitize',
+            'ngResource',
             'blocks.exception',
             'blocks.logger',
             'blocks.router',

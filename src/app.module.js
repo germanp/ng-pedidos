@@ -17,13 +17,25 @@
 
     /* @ngInject */
     function ngPedidosRun(routerHelper) {
-        routerHelper.configureStates(getStates());
+        routerHelper.configureStates(getStates(), '/tabla-pedidos');
     }
 
     function getStates() {
         return [
 
+               {
+               state: 'tabla-pedidos',
+               config: {
+                       url: '/tabla-pedidos',
+                       templateUrl: 'appCore/tabla-pedidos/tabla-pedidos.html',
+                       controller: 'TablaPedidosCtrl',
+                       controllerAs: 'vm',
+                       title: 'Nuevo Pedido'
+              }
+        },
             /* Add New States Above */
+
+
         ];
     }
 

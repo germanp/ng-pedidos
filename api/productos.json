@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "nombre": "Budín Algarroba"
+  },
+  {
+    "id": 2,
+    "nombre": "Budín Algarroba y Nuez"
+  },
+  {
+    "id": 3,
+    "nombre": "Budín Banana"
+  },
+  {
+    "id": 4,
+    "nombre": "Budín Limón"
+  },
+  {
+    "id": 5,
+    "nombre": "Budín Manzana y Pasas"
+  },
+  {
+    "id": 6,
+    "nombre": "Budín Marmolado"
+  },
+  {
+    "id": 7,
+    "nombre": "Budín Naranja"
+  },
+  {
+    "id": 8,
+    "nombre": "Pan Gluten"
+  },
+  {
+    "id": 9,
+    "nombre": "Pan Integral"
+  },
+  {
+    "id": 10,
+    "nombre": "Pan Lino y Girasol"
+  },
+  {
+    "id": 11,
+    "nombre": "Pan Multicereal"
+  },
+  {
+    "id": 12,
+    "nombre": "Pizzeta"
+  },
+  {
+    "id": 13,
+    "nombre": "Pizzeta Cebolla"
+  }
+]

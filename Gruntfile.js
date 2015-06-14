@@ -55,7 +55,11 @@ module.exports = function(grunt) {
                 '/bower_components',
                 mountFolder(connect, './bower_components')
             ),
-            mountFolder(connect, 'src')
+            connect().use(
+                '/api',
+                mountFolder(connect, './api')
+            ),
+            mountFolder(connect, 'src'),
         ];
     };
 
@@ -155,6 +159,7 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     {src: ['img/**'], dest: 'dist/'},
+                    {src: ['api/*.json'], dest: 'dist/', expand:true},
                     {
                         src: ['bower_components/font-awesome/fonts/**'],
                         dest: 'dist/',

@@ -1,0 +1,52 @@
+<!-- remember using vm.VARNAME -->
+<div class="col-md-12">
+    <h2>Pedidos</h2>
+    <form name="nuevoPedido" ng-submit="vm.agregarProducto()" novalidate="true">
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cant.</th>
+                    <th>Cambios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" ng-model="vm.nuevo.producto" required="true" autofocus="true"
+                               typeahead="producto.nombre for producto in vm.productos | filter:$viewValue | limitTo:8">
+                    </td>
+                    <td>
+                        <input type="number" name="cantidad" required="true" min="0" max="100" ng-model="vm.nuevo.cantidad" />
+                    </td>
+                    <td>
+                        <input type="number" name="cambios" required="true" min="0" max="100" ng-model="vm.nuevo.cambios"/>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-plus-circle"></i> Agregar
+                        </button>
+
+                    </td>
+                </tr>
+                <tr ng-repeat="pedido in vm.pedidos track by $index" class="slide-left">
+                    <td>{{ pedido.producto }}</td>
+                    <td>{{ pedido.cantidad }}</td>
+                    <td>{{ pedido.cambios }}</td>
+                    <td>
+                        <a class="btn btn-danger" ng-click='vm.borrarProducto($index)'>
+                            <i class="fa fa-times"></i> Borrar
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>{{ vm.totalCantidad }}</td>
+                    <td>{{ vm.totalCambios }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</div>
